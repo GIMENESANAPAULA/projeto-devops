@@ -5,6 +5,7 @@ on:
     branches: [ principal ]
   pull_request:
     branches: [ principal ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
         run: ls -la
 
       - name: Run tests
-        run: echo "Tests passed successfully"
+        run: echo "CI funcionando com sucesso"
 
       - name: Deploy
-        run: echo "Deployment successful"
+        run: echo "CD funcionando com sucesso"
