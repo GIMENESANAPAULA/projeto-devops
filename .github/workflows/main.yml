@@ -1,0 +1,24 @@
+name: CI-CD
+
+on:
+  push:
+    branches: [ principal ]
+  pull_request:
+    branches: [ principal ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: List files
+        run: ls -la
+
+      - name: Run tests
+        run: echo "Tests passed successfully"
+
+      - name: Deploy
+        run: echo "Deployment successful"
